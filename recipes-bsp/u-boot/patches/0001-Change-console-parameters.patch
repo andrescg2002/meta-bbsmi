@@ -1,0 +1,15 @@
+diff --git a/include/env_mender.h b/include/env_mender.h
+index 2c43fd3..455a828 100644
+--- a/include/env_mender.h
++++ b/include/env_mender.h
+@@ -105,7 +105,7 @@
+ 
+ #define CONFIG_MENDER_BOOTCOMMAND                                       \
+     "run mender_setup; "                                                \
+-    "setenv bootargs root=${mender_kernel_root} ${bootargs}; "          \
++    "setenv bootargs root=${mender_kernel_root} ${bootargs} console=ttyS0,115200n8; "          \
+     "if test \"${fdt_addr_r}\" != \"\"; then "                          \
+     "load ${mender_uboot_root} ${fdt_addr_r} /boot/${mender_dtb_name}; " \
+     "fi; "
+-- 
+2.7.4

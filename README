@@ -1,0 +1,62 @@
+This README file contains information on the contents of the
+syrus layer.
+
+Please see the corresponding sections below for details.
+
+
+Dependencies
+============
+
+This layer depends on:
+
+  git clone -b rocko git://git.yoctoproject.org/poky.git
+  git clone -b rocko git://git.yoctoproject.org/meta-ti
+  git clone ssh://git@iapps.pegasusgateway.com/git/projects/meta-syrus
+  git clone -b rocko git://git.openembedded.org/meta-openembedded
+  git clone -b rocko https://github.com/mendersoftware/meta-mender.git
+
+
+Patches
+=======
+
+None
+
+
+Table of Contents
+=================
+
+  I. Adding the syrus layer to your build
+ II. Misc
+
+
+I. Adding the syrus layer to your build
+=================================================
+
+In order to use this layer, you need to make the build system aware of
+it.
+
+Assuming the syrus layer exists at the top-level of your
+yocto build tree, you can add it to the build system by adding the
+location of the syrus layer to bblayers.conf, along with any
+other layers needed. e.g.:
+
+  BBLAYERS ?= " \
+    /home/andres/yocto/poky/meta \
+    /home/andres/yocto/poky/meta-poky \ 
+    /home/andres/yocto/meta-syrus \  
+    /home/andres/yocto/meta-openembedded/meta-oe \
+    /home/andres/yocto/meta-openembedded/meta-networking \
+    /home/andres/yocto/meta-openembedded/meta-python \
+    /home/andres/yocto/meta-openembedded/meta-multimedia \    
+    /home/andres/yocto/meta-ti \    
+    /home/andres/yocto/meta-mender/meta-mender-core \  
+
+    "
+
+
+II. Misc
+========
+
+Specific Information can be found here:
+https://docs.google.com/document/d/1ZTcAN9LStMsWX77IMaJlkono5xdCDBwS8kYJ1lGPrwg/edit#
+Section: New Syrus Linux image Step by Step
