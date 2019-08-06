@@ -150,4 +150,4 @@ ROOTFS_POSTPROCESS_COMMAND += " \
     set_local_timezone ; \    
  "
 
-export IMAGE_BASENAME = "full-image"
+export IMAGE_BASENAME = "bbs-mi"
